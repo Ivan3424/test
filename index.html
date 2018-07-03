@@ -10,14 +10,18 @@
 <script type="text/javascript">
 	function init(){
 		var parent = document.getElementById('parent');
+		var b = document.createElement('br');
 		for(var i=0; i<3; i++){
 			for(var j=0;j<4;j++){
 				var c = document.createElement('div');
 				c.className = "child";
+				var img = document.createElement('img');
+				img.src = "1.jpg";
+				c.appendChild(img);
+				c.appendChild(b);
 				c.innerHTML = "qqqqqq";
 				parent.appendChild(c);
 			}
-		var b = document.createElement('br');
 		parent.appendChild(b);
 	}
 }
