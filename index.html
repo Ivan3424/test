@@ -2,41 +2,33 @@
 <head>
 <meta charset=UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes" /> 
+<style type="text/css">
+.group{border:1px solid #000000;text-align:center;padding:10 0 10 0}
+.child{border:1px solid #cccccc;display:inline-block;width:20%;margin:5 5 5 5}
+</style>
+
+<script type="text/javascript">
+	function init(){
+		var parent = document.getElementById('parent');
+		for(var i=0; i<3; i++){
+			for(var j=0;j<4;j++){
+				var c = document.createElement('div');
+				c.className = "child";
+				c.innerHTML = "qqqqqq";
+				parent.appendChild(c);
+			}
+		var b = document.createElement('br');
+		parent.appendChild(b);
+	}
+}
+</script>
 </head>
 <body>
 
-<html>
-<body>
-
-<table border="1" width=100%>
-  <tr>
-    <th>Month</th>
-  </tr>
-  <tr >
-    <td width=25%>January
-	<img src="img.jpg"/>
-	</td>
-    <td width=25%>$按按啊啊</td>
-    <td width=25%>January</td>
-    <td width=25%>$100</td>
-  </tr>
-</table>
-
-</body>
-</html>
-
-
-<button onclick="test()">
-Click me
-</button>
-
-
-<script>
-function test(){
-	console.log("123");
-}
-</script>
-
+<div class="group" id='parent' onclick="init()">
+sdjlkfajdlskf
+<br>
+</div>
 
 
 </body>
