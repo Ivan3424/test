@@ -3,7 +3,7 @@
 <meta charset=UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes" /> 
 <style type="text/css">
-.group{border:2px solid #000000;text-align:center;padding:2% 0 2% 0;background-color:#000000}
+.group{border:2px solid #000000;text-align:center;padding:2% 0 2% 0;background-color:#000000;color:#ffffff;font-size:20px}
 .child{border:2px solid #ffffff;display:inline-block;width:30%;margin:5% 5% 5% 5%;padding:2% 0 2% 0;background-color:#666666}
 .image{border:2px solid #ffffff;width:80%;height:80%;margin:0 0 3% 0}
 .text{width:80%;height:20%;display:inline-block;overflow:hidden;color:#ffffff}
@@ -23,10 +23,10 @@
 		parent.className = "group";
 		document.body.appendChild(parent);
 		var str = build("平衡忍者","./icon/icon_pinghengrenzhe.jpg","//ivan3424.github.io/pinghengrenzhe/");
-		str += ","+build("平衡忍者","./icon/icon_pinghengrenzhe.jpg","//ivan3424.github.io/pinghengrenzhe/");
+		str += ","+build("重力酷跑","./icon/icon_zhonglikupao.jpg","//ivan3424.github.io/zhonglikupao/");
 		str = "["+str+"]";
 		var str2=eval('('+str+')');
-		parent.innerHTML += "<br>";
+		parent.innerHTML += "载入黑屏请耐心等待或刷新<br>";
 		
 		for(var i=0; i<str2.length; i++){
 			var c = document.createElement('div');
