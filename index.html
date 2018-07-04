@@ -4,7 +4,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes" /> 
 <style type="text/css">
 .group{border:1px solid #000000;text-align:center;padding:2% 0 2% 0}
-.child{border:1px solid #cccccc;display:inline-block;width:40%;margin:1% 2% 1% 2%;padding:1% 0 2% 0}
+.child{border:1px solid #cccccc;display:inline-block;width:30%;margin:1% 2% 1% 2%;padding:2% 0 2% 0}
 .image{width:80%;height:80%;margin:0 0 3% 0}
 .text{width:80%;height:20%;display:inline-block;overflow:hidden}
 </style>
@@ -28,30 +28,28 @@
 		//parent.innerHTML += sss[1].age;
 		parent.innerHTML += "<br>";
 		
-		for(var i=0; i<3; i++){
-			for(var j=0;j<2;j++){
-				var c = document.createElement('div');
-				c.className = "child";
-				parent.appendChild(c);
-				c.style.height = c.offsetWidth+"px";
-				var img = document.createElement('img');
-				img.className = "image";
-				img.src = "img.jpg";
-				c.appendChild(img);
-				c.innerHTML += "<br>";
-
-				var t = document.createElement('div');
-				t.className = "text";
-				c.appendChild(t);
-
-				var q = "啊啊啊啊";
-				var qq= q.replace(/[^\x00-\xff]/g,"01");
-				var size = Math.min(Math.floor(c.clientWidth/qq.length), t.clientHeight);
-				c.style.fontSize = size+'px';
-				t.innerHTML += q;
-				s="//www.baidu.com";
-				c.onclick = function(){go(s);}; 
-			}
+		for(var i=0; i<12; i++){
+			var c = document.createElement('div');
+			c.className = "child";
+			parent.appendChild(c);
+			c.style.height = c.offsetWidth+"px";
+			var img = document.createElement('img');
+			img.className = "image";
+			img.src = "img.jpg";
+			c.appendChild(img);
+			c.innerHTML += "<br>";
+			
+			var t = document.createElement('div');
+			t.className = "text";
+			c.appendChild(t);
+			
+			var q = "啊啊啊啊";
+			var qq= q.replace(/[^\x00-\xff]/g,"01");
+			var size = Math.min(Math.floor(c.clientWidth/qq.length), t.clientHeight);
+			c.style.fontSize = size+'px';
+			t.innerHTML += q;
+			s="//www.baidu.com";
+			c.onclick = function(){go(s);}; 
 		}
 	}
 	
