@@ -30,16 +30,15 @@
 			for(var j=0;j<4;j++){
 				var c = document.createElement('div');
 				c.className = "child";
+				parent.appendChild(c);
 				var img = document.createElement('img');
 				img.src = "img.jpg";
-				parent.appendChild(c);
 				c.appendChild(img);
 				c.innerHTML += "<br>";
 				c.innerHTML += str[i].ename;
-				var s = "//www.baidu.com";
-				c.onclick = function(){go(s)}; 
+				s="//www.baidu.com";
+				c.onclick = function(){go(s);}; 
 			}
-		parent.innerHTML += "<br>";
 		}
 	}
 	
