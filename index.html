@@ -5,7 +5,8 @@
 <style type="text/css">
 .group{border:1px solid #000000;text-align:center;padding:10 0 10 0}
 .child{border:1px solid #cccccc;display:inline-block;width:20%;margin:10 2% 10 2%;padding:10 0 10 0}
-.image{width:80%;height:80%}
+.image{width:80%;height:80%;margin:0 0 5 0}
+.text{border:1px solid #abdce1;width:80%;height:20%;display:inline-block;overflow:hidden;vertical-align:center}
 </style>
 
 <script type="text/javascript">
@@ -27,7 +28,7 @@
 		parent.innerHTML += sss[1].age;
 		parent.innerHTML += "<br>";
 		
-		for(var i=0; i<3; i++){
+		for(var i=0; i<6; i++){
 			for(var j=0;j<4;j++){
 				var c = document.createElement('div');
 				c.className = "child";
@@ -38,7 +39,16 @@
 				img.src = "img.jpg";
 				c.appendChild(img);
 				c.innerHTML += "<br>";
-				c.innerHTML += str[i].ename;
+
+				var t = document.createElement('div');
+				t.className = "text";
+				c.appendChild(t);
+
+				var q = "啊啊啊啊";
+				var qq= q.replace(/[^\x00-\xff]/g,"01");
+				var size = Math.min(Math.floor(c.clientWidth/qq.length), t.clientHeight);
+				c.style.fontSize = size+'px';
+				t.innerHTML += q;
 				s="//www.baidu.com";
 				c.onclick = function(){go(s);}; 
 			}
@@ -53,7 +63,6 @@
 </head>
 
 <body onload="init()">
-
 
 
 </body>
