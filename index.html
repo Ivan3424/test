@@ -8,29 +8,49 @@
 </style>
 
 <script type="text/javascript">
+	function build(name, age, salary){
+		return "{'ename':'"+name+"','age':'"+age+"','salary':'"+salary+"'}";
+	}
+
 	function init(){
-		var parent = document.getElementById('parent');
-		var b = document.createElement('br');
+		//var parent = document.getElementById('parent');
+		var str="[{'ename':'tom','salary':'3500','age':'25'},{'ename':'jphn','salary':'3800','age':'25'},{'ename':'mary','salary':'3600','age':'25'},{'ename':'mary','salary':'3600','age':'25'}]";
+		var jsonObject=eval('('+str+')');
+		var parent = document.createElement('div');
+		parent.className = "group";
+		document.body.appendChild(parent);
+		var ss = build(1,2,3);
+		ss += ","+build("a","b","c");
+		ss = "["+ss+"]";
+		var sss=eval('('+ss+')');
+		parent.innerHTML += sss[1].age;
+		parent.innerHTML += "<br>";
+		
 		for(var i=0; i<3; i++){
 			for(var j=0;j<4;j++){
 				var c = document.createElement('div');
 				c.className = "child";
 				var img = document.createElement('img');
-				img.src = "1.jpg";
+				img.src = "img.jpg";
 				parent.appendChild(c);
 				c.appendChild(img);
-				c.innerHTML += "<br>qqqqqq";
+				c.innerHTML += "<br>";
+				c.innerHTML += str[i].ename;
+				var s = "//www.baidu.com";
+				c.onclick = function(){go(s)}; 
 			}
 		}
 	}
+	
+	function go(s){
+		window.location.href=s;
+		// //www.baidu.com
+	}
 </script>
 </head>
-<body>
 
-<div class="group" id='parent' onclick="init()">
-sdjlkfajdlskf
-<br>
-</div>
+<body onload="init()">
+
 
 
 </body>
