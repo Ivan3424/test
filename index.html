@@ -98,9 +98,9 @@
 			c.appendChild(t);
 			
 			var name = str2[i].name;
-			var nameSize= name.replace(/[^\x00-\xff]/g,"01");
-			var size = Math.min(Math.floor(c.clientWidth/nameSize.length), t.clientHeight);
-			c.style.fontSize = size+'px';
+			//var nameSize= name.replace(/[^\x00-\xff]/g,"01");
+			//var size = Math.min(Math.floor(c.clientWidth/nameSize.length), t.clientHeight);
+			//c.style.fontSize = size+'px';
 			t.innerHTML += name;
 			buildLink(c, str2[i].link);
 			//c.onclick = function(){window.location.href=str2[0].link;}; 
